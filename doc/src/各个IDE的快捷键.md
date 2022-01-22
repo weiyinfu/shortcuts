@@ -22,3 +22,17 @@ https://github.com/bulenkov/VSCodeKeymap4IntelliJ/blob/master/resources/keymaps/
 * IntelliJ Idea的快捷键设置很不合理，必须自己定制才能好用。萝卜白菜各有所爱，人人都有自己的偏好和个性。
 * 各个IDE没有统一的快捷键设置，大部分快捷键没有明确的语义。  
 * IDE之间快捷键完全统一是不可能的，不同IDE具有不同的命令、不同的功能。  
+
+# Jetbrain系列keymap文件的写法
+keymap可以继承，设置parent即可。keymap是一个平铺的结构，action有id这个属性，表示action的特点，action内部有一个keyboard-shortcut属性。  
+```xml
+<keymap version="1" name="Eclipse" disable-mnemonics="false" parent="$default">
+    <action id="FileChooser.TogglePathShowing">
+      <keyboard-shortcut first-keystroke="control P"/>
+    </action>
+    <action id="$Redo">
+      <keyboard-shortcut first-keystroke="control Y"/>
+    </action>
+    <action id="CopyElement"/>
+</keymap>
+```
