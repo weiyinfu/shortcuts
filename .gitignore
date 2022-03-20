@@ -14,3 +14,7 @@ gen
 pages/Test.vue
 package-lock.json
 doc/book
+
+.idea/
+
+*.iml
