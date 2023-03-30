@@ -1,0 +1,1 @@
+rsync -r doc/book/* me:~/app/MyStatic/shortcuts
